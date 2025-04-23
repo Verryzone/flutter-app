@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter_app/HomeScreen.dart';
 
 class Login2screen extends StatefulWidget {
   const Login2screen({super.key});
@@ -77,7 +78,37 @@ class _Login2screenState extends State<Login2screen> {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(onPressed: () {
-                  
+                  if (_passwordController.text != '123123123') {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('Password salah! Coba lagi.'),
+                      ),
+                    );
+                    return;
+                  }
+
+                  Map<String, String> data = {
+                    'email' : _emailController.text,
+                    'password' : _passwordController.text,
+                  };
+
+                  Navigator.push(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder:(context, animation, secondaryAnimation) => Homescreen(data: data),
+                      transitionsBuilder: (
+                        context,
+                        animation,
+                        secondaryAnimation,
+                        child,
+                      ) {
+                        return FadeTransition(opacity: animation, child: child);
+                      },
+                    ),
+                  );
+                  print(_emailController.text);
+                  print(_passwordController.text);
+                  // Navigator.pushNamed(context, '/home');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,

@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
       ),
-      home: LoginScreen(),
+      home: Login2screen(),
       // initialRoute: '/splash',
       // routes: {
       //   '/login': (context) =>  LoginScreen(),
