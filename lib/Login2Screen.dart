@@ -9,8 +9,8 @@ class Login2screen extends StatefulWidget {
 }
 
 class _Login2screenState extends State<Login2screen> {
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
   bool tampilPassword = false;
 
   ShowPassword() {

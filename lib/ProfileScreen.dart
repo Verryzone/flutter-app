@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_flutter_app/LoginScreen.dart';
 
 class Profilescreen extends StatelessWidget {
   final Map<String, String>? data;
