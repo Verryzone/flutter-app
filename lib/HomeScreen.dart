@@ -14,7 +14,7 @@ class Homescreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home', style: TextStyle(color: Colors.white)),
         leading: const SizedBox.shrink(),
-        backgroundColor: Color(0xFFFF4081),
+        backgroundColor: Color.fromARGB(255, 109, 68, 255),
       ),
       body: Center(
         child: Padding(
@@ -25,12 +25,12 @@ class Homescreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Icon(Icons.favorite, size: 100, color: Color(0xFFFF4081)),
+                  const Icon(Icons.favorite, size: 100, color: Color.fromARGB(255, 109, 68, 255)),
                   const Text(
                     'Selamat Datang',
                     style: TextStyle(
                       fontSize: 50,
-                      color: Color(0xFFFF4081),
+                      color: Color.fromARGB(255, 109, 68, 255),
                       fontFamily: 'SoulSignature',
                     ),
                   ),
@@ -62,7 +62,7 @@ class Homescreen extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFFF4081),
+                  backgroundColor: const Color.fromARGB(255, 109, 68, 255),
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),

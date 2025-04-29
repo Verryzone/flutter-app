@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_app/HomeScreen.dart';
+import 'package:my_first_flutter_app/components/PrimaryTextField.dart';
 
 class Login2screen extends StatefulWidget {
   const Login2screen({super.key});
@@ -35,14 +36,14 @@ class _Login2screenState extends State<Login2screen> {
                     // const Icon(
                     //   Icons.person,
                     //   size: 60,
-                    //   color: Colors.blue,
+                    //   color: Color.fromARGB(255, 109, 68, 255),
                     // ),
                     const Text(
                       'Login',
                       style: TextStyle(
                         fontSize: 50,
                         fontWeight: FontWeight.bold,
-                        color: Colors.blueAccent,
+                        color: Color.fromARGB(255, 109, 68, 255),
                         fontFamily: 'SoulSignature',
                       ),
                     ),
@@ -50,29 +51,23 @@ class _Login2screenState extends State<Login2screen> {
                 ),
               ),
               SizedBox(height: 16,),
-              TextField(
+              PrimaryTextField(
                 controller: _emailController,
-                decoration: InputDecoration(
-                  labelText: 'Email',
-                  border: OutlineInputBorder(),
-                  hintText: 'Enter your email',
-                  prefixIcon: Icon(Icons.email, color: Colors.blue),
-                ),
+                labelText: 'Email',
+                hintText: 'Enter your email',
+                prefixIcon: Icon(Icons.email, color: Color.fromARGB(255, 109, 68, 255)),
               ),
               SizedBox(height: 16),
-              TextField(
+              PrimaryTextField(
                 controller: _passwordController,
-                decoration: InputDecoration(
-                  labelText: 'Password',
-                  border: OutlineInputBorder(),
-                  hintText: 'Enter your password',
-                  prefixIcon: Icon(Icons.lock, color: Colors.blue),
-                  suffixIcon: IconButton(
-                    icon: Icon(tampilPassword ? Icons.visibility_off : Icons.visibility),
-                    onPressed: ShowPassword,
-                  ),
+                labelText: 'Password',
+                hintText: 'Enter your password',
+                prefixIcon: Icon(Icons.lock, color: Color.fromARGB(255, 109, 68, 255)),
+                iconButton: IconButton(
+                  icon: Icon(tampilPassword ? Icons.visibility : Icons.visibility_off),
+                  onPressed: ShowPassword,
                 ),
-                obscureText: tampilPassword,
+                obscureText: !tampilPassword,
               ),
               SizedBox(height: 16),
               SizedBox(
@@ -111,7 +106,7 @@ class _Login2screenState extends State<Login2screen> {
                   // Navigator.pushNamed(context, '/home');
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Color.fromARGB(255, 109, 68, 255),
                   padding: const EdgeInsets.symmetric(vertical: 15.0),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),
@@ -125,4 +120,5 @@ class _Login2screenState extends State<Login2screen> {
       ),
     );
   }
+
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter_app/components/AvatarProfile.dart';
 
 class ProfileColorChange extends StatefulWidget {
   final Map<String, String>? data;
@@ -29,7 +30,7 @@ class _ProfileColorChangeState extends State<ProfileColorChange> {
       appBar: AppBar(
         title: const Text('Profile', style: TextStyle(color: Colors.white)),
         leading: const SizedBox.shrink(),
-        backgroundColor: Color(0xFFFF4081),
+        backgroundColor: Color.fromARGB(255, 109, 68, 255),
         actions: [
           Padding(padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Switch(value: isDarkMode, onChanged: (bool value) {
@@ -47,20 +48,14 @@ class _ProfileColorChangeState extends State<ProfileColorChange> {
             padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
             child: Column(
               children: [
-                const CircleAvatar(
-                  radius: 100,
-                  backgroundColor: Color(0xFFFF4081),
-                  child: CircleAvatar(
-                    radius: 95,
-                    backgroundColor: Color(0xFFFF4081),
-                    backgroundImage: AssetImage('assets/images/profile.png'),
-                  ),
+                AvatarProfile(
+                  gambar: 'assets/images/profile.png',
                 ),
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.favorite, color: Color(0xFFFF4081)),
+                    Icon(Icons.favorite, color: Color.fromARGB(255, 109, 68, 255)),
                     Text(
                       email,
                       style: TextStyle(
